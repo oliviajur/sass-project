@@ -1,0 +1,409 @@
+$fontsize: 17px;
+$lineheight: 145%;
+
+//RESPONSIVE
+
+$colors: (
+  intro: #1E3AC9,
+  one: #1B32BB,
+  two: #1929AD,
+  three:#16219F,
+  four: #141990,
+  five:#111182,
+  six: #0F0874,
+  seven:#0C0066,
+);
+
+@function color($color-name){
+  @return map-get($colors, $color-name)
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1{
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  h3{
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+  
+  body{
+    font-family: "Quicksand", sans-serif;
+    //overflow: hidden; //disable scolling
+    color: rgba(247, 247, 247, 0);
+    font-size: $fontsize;
+    line-height: $lineheight;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  
+  li {
+    padding-left: 1em; 
+    text-indent: -.7em;
+  }
+
+  li::before {
+    content: "• ";
+    color:#E167A0; /* or whatever color you prefer */
+  }
+
+  .home{
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color:#f7f7f7;
+    width: 100%;
+    height: 100vh; 
+    //background:  linear-gradient(270.3deg, #1E3AC9 2.72%, #0C0066 68.59%);
+    background: linear-gradient(75deg, hsla(247, 100%, 20%, 1) 0%, hsla(230, 74%, 45%, 1) 60%, hsla(332, 67%, 64%, 1) 100%);
+    //background: linear-gradient(90deg, hsla(247, 100%, 20%, 1) 32%, hsla(230, 74%, 45%, 1) 79%, hsla(332, 67%, 64%, 1) 100%);
+    .logo {
+      width: 643px;
+      height: 53px;
+      margin-left: 46px;
+      padding-top: 37px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 127%;
+    }
+
+    .question{
+      margin-left: 106px;
+      padding-top: 200px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 127%;
+    }
+
+    .title{
+      width: 570px;
+      height: 198px;
+      margin-left: 238px;
+      padding-top: 30px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 100px;
+      line-height: 90%;   
+    }
+
+    .pull{
+        width:520px;
+        height: 145px;
+        margin-left: 244px;
+        padding-top: 60px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .lil{
+      margin-left: 412px;
+      padding-top: 160px;
+      width: 198px;
+      height: 66px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 127%;
+    }
+    }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden; //disable scolling
+
+    
+    div{
+      flex: 1;
+      transition: .3s;
+      max-width: 100%;
+      min-width: 10%;
+      height: 100vh;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-top: 3%;
+      text-align: left;
+
+  
+      &:hover{
+        transition: .5s;
+        max-width: 100% !important;
+        flex-grow: 5;
+        cursor: pointer;
+        color:rgba(247, 247, 247, 1);
+        font-size: $fontsize;
+        line-height: $lineheight;
+
+      }
+    }
+
+    .first{
+      background-color: color(one);
+    }
+
+    .second{
+      background-color:color(two) ;
+    }
+
+    .third{
+      background-color:color(three) ;
+    }
+
+    .fourth{
+      background-color:color(four) ;
+    }
+
+    .fifth{
+      background-color:color(five);
+    }
+
+    .sixth{
+      background-color:color(six);
+    }
+
+    .seventh{
+      background-color:color(seven);
+    }
+
+    .intro{
+      background-color:color(intro) ;
+    }
+  }
+
+//MEDIA QUERY 
+//MEDIA QUERY FOR STEPS
+@media (max-width: 800px){
+  body{
+    overflow: scroll;
+    color: rgba(247, 247, 247, 1);
+    .container{
+      flex-flow: column nowrap;
+    }
+    .item{
+      display:inline-block;
+    }
+    .first{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .second{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .third{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .fourth{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .fifth{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .sixth{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .seventh{
+      padding-left: 5%;
+      padding-right: 25%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+    .intro{
+      padding-left: 5%;
+      padding-right: 20%;
+      padding-bottom: 5%;
+      padding-top: 10%;
+    }
+  }
+}
+
+//MEDIA QUERY FOR HOMEPAGE
+@media (max-width: 800px){
+  .home{
+    color:#f7f7f7;
+    height: 110vh; 
+    //background: linear-gradient(365deg, hsla(247, 100%, 20%, 1) 0%, hsla(230, 74%, 45%, 1) 60%, hsla(332, 67%, 64%, 1) 100%);
+    background: linear-gradient(0deg, hsla(247, 100%, 20%, 1) 20%, hsla(230, 74%, 45%, 1) 65%, hsla(332, 67%, 64%, 1) 100%);
+    .logo {
+      width: 643px;
+      height: 53px;
+      margin-left: 40px;
+      padding-top: 30px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 107%;
+    }
+    .question{
+      height: 53px;
+      width: 380px;
+      padding-top: 100px;
+      margin-left: 80px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 127%;
+    }
+    .title{
+    width: 496px;
+    height: 198px;
+    margin-left: 80px;
+    padding-top:50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 96%; 
+    }
+    .pull{
+      width:500px;
+      height: 105px;
+      margin-left: 80px;
+      padding-top: 50px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+     
+}
+
+@media (max-width: 1010px){
+  .item{
+    display:none;
+  }
+}
+
+//MEDIA QUERY FOR IPHONE
+@media (max-width: 375px){
+  .home{
+    overflow-x: hidden;
+    color:#f7f7f7;
+    height: 100vh;
+    background: linear-gradient(0deg, hsla(247, 100%, 20%, 1) 20%, hsla(230, 74%, 45%, 1) 75%, hsla(332, 67%, 64%, 1) 100%);
+    .logo {
+      width: 643px;
+      height: 53px;
+      margin-left: 30px;
+      padding-top: 20px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 107%;
+    }
+    .question{
+      font-size: 18px;
+      padding-top: 90px;
+      margin-left: 30px;
+      width: 200px;
+    }
+    .title{
+      margin-left: 30px;
+      padding-top: 80px;
+      font-size: 57px;
+      width: 310px;
+      line-height: 90%;
+      font-weight: 500;
+      letter-spacing:-1.5px; 
+    }
+    .pull{
+      margin-left: 30px;
+      font-size: 17px;
+      width: 220px;
+      padding-top: 18px;
+      line-height: 150%;  
+    }
+  }
+  body{
+    overflow: scroll;
+    color: rgba(247, 247, 247, 1);
+    .container{
+      flex-flow: column nowrap;
+    }
+    .item{
+      display:inline-block;
+    }
+    .first{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .second{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .third{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .fourth{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .fifth{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .sixth{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .seventh{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+    .intro{
+      padding-left: 30px;
+      padding-right: 20%;
+      padding-bottom: 10%;
+      padding-top: 20%;
+    }
+  }
+}
+
+
